@@ -1,5 +1,6 @@
+
 import React, { Component } from 'react'
-import { Nav, Navbar } from 'react-bootstrap';
+import { Nav, Navbar, Button } from 'react-bootstrap';
 
 export default class HomeNavbar extends Component {
     constructor(props){
@@ -15,19 +16,19 @@ export default class HomeNavbar extends Component {
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav justify variant="pills" defaultActiveKey="/home" className="mr-auto">
                         <Nav.Item >
-                            <Nav.Link eventKey="link-1">Eat</Nav.Link>
+                        <Button className="nav-button"variant="outline-success">Eat</Button>
                         </Nav.Item>
                         <Nav.Item>
-                            <Nav.Link eventKey="link-2">Drink</Nav.Link>
+                        <Button className="nav-button" variant="outline-success">Drinks</Button>
                         </Nav.Item>
                         <Nav.Item>
-                            <Nav.Link eventKey="link-3">Sleep</Nav.Link>
+                        <Button className="nav-button" variant="outline-success">Sleep</Button>
                         </Nav.Item>
                         <Nav.Item>
-                            <Nav.Link eventKey="link-4">Shop</Nav.Link>
+                        <Button className="nav-button" variant="outline-success">Shop</Button>
                         </Nav.Item>
                         <Nav.Item>
-                            <Nav.Link eventKey="link-5">Services</Nav.Link>
+                        <Button className="nav-button" variant="outline-success">Service</Button>
                         </Nav.Item>
                     </Nav>
                     <Nav className="ml-auto">
