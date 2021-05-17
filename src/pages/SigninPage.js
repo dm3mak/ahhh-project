@@ -1,14 +1,66 @@
 import React, { Component } from 'react'
-import { Link } from 'react-router-dom'
+import { Container } from 'react-bootstrap'
+
 
 export default class SigninPage extends Component {
+    constructor(props){
+        super(props);
+        this.state={
+            email:'',
+            password:''
+        }
+    }
+    updatePass = (event)=>{
+        this.setState({
+           password: event.target.value
+        })
+    }
+    updateEmail = (event)=>{
+        this.setState({
+            email: event.target.value
+        })
+    } 
+    handleLogin = () => {
+        // Checked the typed username and password from the controlled components
+        // Check if user exists in this.props.allUsers, and if the password is correct
+        // if true return the user object
+        // if false - show alert - password/ used not found
+        const foundUser = this.props.allUsers.find( (user) => {
+            if(user.email === this.state.email && user.pwd === this.state.pwd){
+                return true
+            }
+        });
+        if(foundUser){
+            this.props.login(foundUser);
+            window.location.href="/#/";
+        }
+        else{
+            alert("Email or Password incorrect")
+        } 
+    }
     render() {
         return (
-            <div className="p-signin">
-               <h1>Now it's Happy-Hour to join</h1>
-               <div>Please sign in</div>
-               <span>New user?   </span><Link to="/signup">Sign Up</Link>
-            </div>
-        )
+            <Container >
+            <form>
+                <h3>Sign In</h3>
+
+                <div className="form-group">
+                    <label>Email address</label>
+                    <input type="email" className="form-control" placeholder="Enter email" onChange={this.updateEmail} value = {this.state.email}/>
+                </div>
+
+                <div className="form-group">
+                    <label>Password</label>
+                    <input type="password" className="form-control" placeholder="Enter password" onChange={this.updatePass} value = {this.state.password}/>
+                </div>
+
+                
+                <button type="button" className="btn btn-primary btn-block" onClick={this.handleLogin} variant ="success">Submit</button>
+                <p className="forgot-password text-right">
+                   New Member? <a href="/#/signup">SignUp</a>
+                </p>
+            </form>
+            </Container>
+        );
     }
 }

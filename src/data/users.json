@@ -1,0 +1,26 @@
+[
+    {
+        "fname":"Olga",
+        "lname":"Chef",
+        "email":"olga@gmail.com",
+        "password":"1234"
+    },
+    {
+        "fname":"Katrin",
+        "lname":"Mak",
+        "email":"katrin@gmail.com",
+        "password":"1234"
+    },
+    {
+        "fname":"Richard",
+        "lname":"Mak",
+        "email":"Richard@gmail.com",
+        "password":"5678"
+    },
+    {
+        "fname":"Dima",
+        "lname":"Mak",
+        "email":"Dima@gmail.com",
+        "password":"5678"
+    }
+]
