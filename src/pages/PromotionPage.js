@@ -1,11 +1,13 @@
 import React, { Component } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, withRouter } from 'react-router-dom'
 
-export default class PromotionPage extends Component {
+ class PromotionPage extends Component {
+     
     render() {
+        const promo = this.props.allPromos.find((promo) => promo.id == this.props.match.params.id)
         return (
             <div className="p-promotion">
-                I AM EVERY PROMOTION PAGE BY USING ID
+               {promo.title}
                 <Link style={{ color: 'inherit', textDecoration: 'inherit'}} to="/"><h4>Back to home page</h4>
                     </Link>
                 
@@ -13,3 +15,4 @@ export default class PromotionPage extends Component {
         )
     }
 }
+export default withRouter(PromotionPage)

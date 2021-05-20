@@ -1,14 +1,16 @@
 
 import React, { Component } from 'react'
 import { Nav, Navbar, Button } from 'react-bootstrap';
+import { withRouter } from 'react-router';
 import './HomeNavbar.css';
-export default class HomeNavbar extends Component {
+ class HomeNavbar extends Component {
     constructor(props){
-        super(props);
-
+        super(props);  
     }
 
     render() {
+        
+      
         const signinEl =  (!this.props.activeUser)? 
         <Nav.Link href="/#/signin">Sign In</Nav.Link>: null
         const nameEl = (this.props.activeUser) ? 
@@ -17,18 +19,18 @@ export default class HomeNavbar extends Component {
         <Nav.Link href="/#/" onClick={() => this.props.logout()}>Logout</Nav.Link>: null
         return (
             <div>
-            <Navbar bgexpand="lg">
+            <Navbar bg="light" expand="lg">
                 <Navbar.Brand href="/">
                     <h1>Ahhh</h1>
                 </Navbar.Brand>
                 <Navbar.Toggle/>
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav justify variant="pills" defaultActiveKey="/home" className="mr-auto">
-                    <Nav.Link href="/type/eat">Eat</Nav.Link>
-                    <Nav.Link href="/type/drink">Drink</Nav.Link>
-                    <Nav.Link href="/type/sleep">Sleep</Nav.Link>
-                    <Nav.Link href="/type/shop">Shop</Nav.Link>
-                    <Nav.Link href="/type/servise">Service</Nav.Link>
+                    <Nav.Link href={`/#/type/eat`}>Eat</Nav.Link>
+                    <Nav.Link href={`/#/type/drink`}>Drink</Nav.Link>
+                    <Nav.Link href={`/#/type/sleep`}>Sleep</Nav.Link>
+                    <Nav.Link href={`/#/type/shop`}>Shop</Nav.Link>
+                    <Nav.Link href={`/#/type/service`}>Service</Nav.Link>
                     </Nav>
                     <Nav className="ml-auto">
                         {signinEl}
@@ -41,3 +43,4 @@ export default class HomeNavbar extends Component {
         )
     }
 }
+export default withRouter(HomeNavbar)

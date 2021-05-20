@@ -14,13 +14,13 @@
     {
         "fname":"Richard",
         "lname":"Mak",
-        "email":"Richard@gmail.com",
+        "email":"richard@gmail.com",
         "password":"5678"
     },
     {
         "fname":"Dima",
         "lname":"Mak",
-        "email":"Dima@gmail.com",
+        "email":"dima@gmail.com",
         "password":"5678"
     }
 ]

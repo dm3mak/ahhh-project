@@ -9,7 +9,7 @@ import SigninPage from './pages/SigninPage';
 import SignupPage from './pages/SignupPage';
 import HomeNavbar from './components/HomeNavbar';
 import Type from './pages/Type';
-import PromotionsJSON from './data/promotions.json';
+import promotionsJSON from './data/promotions.json';
 import userJSON from './data/users.json';
 
 class App extends React.Component{
@@ -29,17 +29,17 @@ class App extends React.Component{
 
 
     this.state = {
-        allPromos : PromotionsJSON,
-        activeUser: null,
+        allPromos : promotionsJSON,
+        activeUser: usersData[0],
         allUsers: usersData
     }
     
   }
   
-  addPromo = (newPromo, index) => {
+  addPromo = (newPromo) => {
     
     this.setState({
-      allPromos: this.state.allPromos[index].concat(newPromo)
+      allPromos: this.state.allPromos.concat(newPromo)
   
     });
     
@@ -72,6 +72,7 @@ class App extends React.Component{
       <HomeNavbar
         activeUser={this.state.activeUser}
         logout={this.logout}
+        allPromos={this.state.allPromos}
       />
       <Route exact path = "/">
         <HomePage
@@ -80,17 +81,18 @@ class App extends React.Component{
       </Route>
       <Route exact path = "/type/:type">
         <Type
-        
+        allPromos={this.state.allPromos}
         />
       </Route>
       <Route exact path = "/add">
         <AddPage
         activeUser={this.state.activeUser}
+        addPromo = {this.addPromo}
         />
       </Route>
-      <Route exact path = "/promotion/:index"> 
+      <Route exact path = "/promotion/:id"> 
         <PromotionPage
-        
+        allPromos={this.state.allPromos}
         />
       </Route>
       <Route exact path = "/signin">
