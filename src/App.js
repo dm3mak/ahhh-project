@@ -30,7 +30,7 @@ class App extends React.Component{
 
     this.state = {
         allPromos : promotionsJSON,
-        activeUser: usersData[0],
+        activeUser: userJSON[0],
         allUsers: usersData
     }
     
@@ -39,7 +39,7 @@ class App extends React.Component{
   addPromo = (newPromo) => {
     
     this.setState({
-      allPromos: this.state.allPromos.concat(newPromo)
+      allPromos: [newPromo].concat(this.state.allPromos)
   
     });
     
