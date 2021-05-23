@@ -3,6 +3,7 @@ import React, { Component } from 'react'
 import { Nav, Navbar, Button } from 'react-bootstrap';
 import { withRouter } from 'react-router';
 import './HomeNavbar.css';
+import logo from './Ahhh.jpeg'
  class HomeNavbar extends Component {
     constructor(props){
         super(props);  
@@ -19,13 +20,13 @@ import './HomeNavbar.css';
         <Nav.Link href="/#/" onClick={() => this.props.logout()}>Logout</Nav.Link>: null
         return (
             <div>
-            <Navbar bg="light" expand="lg">
+            <Navbar   expand="md">
                 <Navbar.Brand href="/">
-                    <h1>Ahhh</h1>
+                    <img src={logo} alt="Logo" />
                 </Navbar.Brand>
-                <Navbar.Toggle/>
+                <Navbar.Toggle aria-controls="responsive-navbar-nav"/>
                 <Navbar.Collapse id="basic-navbar-nav">
-                    <Nav justify variant="pills" defaultActiveKey="/home" className="mr-auto">
+                    <Nav  variant="pills" defaultActiveKey="/home" className="mr-auto">
                     <Nav.Link href={`/#/type/eat`}>Eat</Nav.Link>
                     <Nav.Link href={`/#/type/drink`}>Drink</Nav.Link>
                     <Nav.Link href={`/#/type/sleep`}>Sleep</Nav.Link>

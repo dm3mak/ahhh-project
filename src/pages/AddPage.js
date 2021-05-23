@@ -17,22 +17,9 @@ export default class AddPage extends Component {
             promoCity:'',
             promoAdress:'',
             promoMoreInfo:'',
-            promoMoreImg: [],
-            validated: false    
+            promoMoreImg: []    
         }
     }
-    handleSubmit = (event) => {
-        const form = event.currentTarget;
-        if (form.checkValidity() === false) {
-          event.preventDefault();
-          event.stopPropagation();
-          this.setState({validated:true});
-        }
-        else{
-            this.saveInfo()
-        }
-        
-      };
     saveInfo = () => {
         const newPromo = {
             id: uuidv4(),
@@ -85,37 +72,34 @@ export default class AddPage extends Component {
         return (
             <div className="p-add">
                 <Container>
-                <Form noValidate validated={this.state.validated} onSubmit={this.handleSubmit}>
+                <Form>
                     <Row>
                         <h1 className="text-center">Let's Begin</h1>
                         <h3 >Step 1 : Choosing an page of promotion</h3>
                         <Col xs={12}>
                             <Form.Group >
                                 <Form.Label>Please choose type of promotion</Form.Label>
-                                <Form.Control as="select" onChange={(event)=> {this.setState({promoType: event.target.value})}} required>
-                                    <option disabled selected value="">Select your option</option>
-                                    <option value="Eat">Eat</option>
-                                    <option value="Drink">Drink</option>
-                                    <option value="Sleep">Sleep</option>
-                                    <option value="Shop">Shop</option>
-                                    <option value="Services">Services</option>
+                                <Form.Control as="select" onChange={(event)=> {this.setState({promoType: event.target.value})}}>
+                                    <option disabled selected>Select your option</option>
+                                    <option>Eat</option>
+                                    <option>Drink</option>
+                                    <option>Sleep</option>
+                                    <option>Shop</option>
+                                    <option>Services</option>
                                 </Form.Control>
-                                <Form.Control.Feedback type="invalid">Please choose Option.</Form.Control.Feedback>
                             </Form.Group>
                         </Col>
                         <h3 >Step 2 : Filling promotion information</h3>
                         <Col xs={12} md={6} lg={4}>
                             <Form.Group>
                                 <Form.Label>Title</Form.Label>
-                                <Form.Control type="text" placeholder="max 30 Characters"  maxLength="30" onChange={(event)=> {this.setState({promoTitle: event.target.value})}} required/>
-                                <Form.Control.Feedback type="invalid">Please enter Name of your Promo.</Form.Control.Feedback>
+                                <Form.Control type="text" placeholder="max 30 Characters"  maxLength="30" onChange={(event)=> {this.setState({promoTitle: event.target.value})}}/>
                             </Form.Group>
                         </Col>
                         <Col xs={12} md={6} lg={4}>
                             <Form.Group>
                                 <Form.Label>Please Insert Your Image Url</Form.Label>
-                                <Form.Control type="text" placeholder="only 1 url" onChange={(event)=> {this.setState({promoImg: event.target.value})}} required/>
-                                <Form.Control.Feedback type="invalid">Please insert img url.</Form.Control.Feedback>
+                                <Form.Control type="text" placeholder="only 1 url" onChange={(event)=> {this.setState({promoImg: event.target.value})}} />
                             </Form.Group>
                         </Col>
                         
@@ -123,78 +107,85 @@ export default class AddPage extends Component {
                             <Row></Row>
                             <Form.Group >
                                 <Form.Label>Happy Hour Starts at</Form.Label>
-                                <Form.Control as="select"  onChange={(event)=> {this.setState({promoStart: event.target.value})}} required>
-                                    <option disabled selected value="">Select your option</option>
-                                    <option value="00:00">00:00</option>
-                                    <option value="01:00">01:00</option>
-                                    <option value="02:00">02:00</option>
-                                    <option value="03:00">03:00</option>
-                                    <option value="04:00">04:00</option>
-                                    <option value="05:00">05:00</option>
-                                    <option value="06:00">06:00</option>
-                                    <option value="07:00">07:00</option>
-                                    <option value="08:00">08:00</option>
-                                    <option value="09:00">09:00</option>
-                                    <option value="10:00">10:00</option>
-                                    <option value="11:00">11:00</option>
-                                    <option value="12:00">12:00</option>
-                                    <option value="13:00">13:00</option>
-                                    <option value="14:00">14:00</option>
-                                    <option value="15:00">15:00</option>
-                                    <option value="16:00">16:00</option>
-                                    <option value="17:00">17:00</option>
-                                    <option value="18:00">18:00</option>
-                                    <option value="19:00">19:00</option>
-                                    <option value="20:00">20:00</option>
-                                    <option value="21:00">21:00</option>
-                                    <option value="22:00">22:00</option>
-                                    <option value="23:00">23:00</option>
+                                <Form.Control as="select"  onChange={(event)=> {this.setState({promoStart: event.target.value})}}>
+                                    <option disabled selected>Select your option</option>
+                                    <option>00:00</option>
+                                    <option>01:00</option>
+                                    <option>02:00</option>
+                                    <option>03:00</option>
+                                    <option>04:00</option>
+                                    <option>05:00</option>
+                                    <option>06:00</option>
+                                    <option>07:00</option>
+                                    <option>08:00</option>
+                                    <option>09:00</option>
+                                    <option>10:00</option>
+                                    <option>11:00</option>
+                                    <option>12:00</option>
+                                    <option>13:00</option>
+                                    <option>14:00</option>
+                                    <option>15:00</option>
+                                    <option>16:00</option>
+                                    <option>17:00</option>
+                                    <option>18:00</option>
+                                    <option>19:00</option>
+                                    <option>20:00</option>
+                                    <option>21:00</option>
+                                    <option>22:00</option>
+                                    <option>23:00</option>
                                 </Form.Control>
                             </Form.Group>
                         </Col>
                         <Col xs={6}  lg={2}>
                             <Form.Group >
                                 <Form.Label>Happy Hour Ends at</Form.Label>
-                                <Form.Control as="select" onChange={(event)=> {this.setState({promoEnd: event.target.value})}} required>
-                                <option disabled selected value="">Select your option</option>
-                                    <option value="01:00">01:00</option>
-                                    <option value="02:00">02:00</option>
-                                    <option value="03:00">03:00</option>
-                                    <option value="04:00">04:00</option>
-                                    <option value="05:00">05:00</option>
-                                    <option value="06:00">06:00</option>
-                                    <option value="07:00">07:00</option>
-                                    <option value="08:00">08:00</option>
-                                    <option value="09:00">09:00</option>
-                                    <option value="10:00">10:00</option>
-                                    <option value="11:00">11:00</option>
-                                    <option value="12:00">12:00</option>
-                                    <option value="13:00">13:00</option>
-                                    <option value="14:00">14:00</option>
-                                    <option value="15:00">15:00</option>
-                                    <option value="16:00">16:00</option>
-                                    <option value="17:00">17:00</option>
-                                    <option value="18:00">18:00</option>
-                                    <option value="19:00">19:00</option>
-                                    <option value="20:00">20:00</option>
-                                    <option value="21:00">21:00</option>
-                                    <option value="22:00">22:00</option>
-                                    <option value="23:00">23:00</option>
-                                    <option value="00:00">00:00</option>
+                                <Form.Control as="select" onChange={(event)=> {this.setState({promoEnd: event.target.value})}}>
+                                    <option disabled selected>Select your option</option>
+                                    <option>01:00</option>
+                                    <option>02:00</option>
+                                    <option>03:00</option>
+                                    <option>04:00</option>
+                                    <option>05:00</option>
+                                    <option>06:00</option>
+                                    <option>07:00</option>
+                                    <option>08:00</option>
+                                    <option>09:00</option>
+                                    <option>10:00</option>
+                                    <option>11:00</option>
+                                    <option>12:00</option>
+                                    <option>13:00</option>
+                                    <option>14:00</option>
+                                    <option>15:00</option>
+                                    <option>16:00</option>
+                                    <option>17:00</option>
+                                    <option>18:00</option>
+                                    <option>19:00</option>
+                                    <option>20:00</option>
+                                    <option>21:00</option>
+                                    <option>22:00</option>
+                                    <option>23:00</option>
+                                    <option>00:00</option>
                                 </Form.Control>
                             </Form.Group>
                         </Col>
                         <Col xs={12}  md={6}>
                             <Form.Group >
                                 <Form.Label>Please write about your business</Form.Label>
-                                <Form.Control as="textarea" rows={3} maxLength ="250" onChange={(event)=> {this.setState({promoAbout: event.target.value})}} required/>
+                                <Form.Control as="textarea" rows={3} maxLength ="250" onChange={(event)=> {this.setState({promoAbout: event.target.value})}}/>
                             </Form.Group>
                         </Col>
                         <Col xs={12} md={6} >
                             <Form.Group >
                                 <Form.Label>Choose weekdays of promotion - You Can choose More that one option</Form.Label>
-                                
-                                <Form.Group required>
+                                {/* <Form.Control as="select"  multiple >
+                                    <option>Sunday</option>
+                                    <option>Monday</option>
+                                    <option>Tuesday</option>
+                                    <option>Wednesday</option>
+                                    <option>Thursday</option>
+                                    <option>Friday</option>
+                                    <option>Saturday</option>
+                                </Form.Control> */}
                                 <Row>
                                   <Col xs={4}  >
                                  <Form.Check type="checkbox" label="Sunday" value="Sunday" onChange={this.checkBoxArr}/>
@@ -220,38 +211,37 @@ export default class AddPage extends Component {
                                  <Form.Check type="checkbox" label="Saturday"  value="Saturday" onChange={this.checkBoxArr}/>
                                  </Col>
                                  </Row>
-                                 </Form.Group>
                             </Form.Group>
                         </Col>
                         
                         <Col xs={12} md={8}>
                             <Form.Group>
                                 <Form.Label>Address</Form.Label>
-                                <Form.Control placeholder="Please type the street and home number" onChange={(event)=> {this.setState({promoAdress: event.target.value})}} required/>
+                                <Form.Control placeholder="Please type the street and home number" onChange={(event)=> {this.setState({promoAdress: event.target.value})}}/>
                             </Form.Group>
                         </Col>
                         <Col xs={12} md={4}>
                         <Form.Group >
                                  <Form.Label>City</Form.Label>
-                                <Form.Control placeholder="Please type the city" onChange={(event)=> {this.setState({promoCity: event.target.value})}} required/>
+                                <Form.Control placeholder="Please type the city" onChange={(event)=> {this.setState({promoCity: event.target.value})}} />
                             </Form.Group>
                         </Col>
                         <h3 >Step 3 : Providing More Information and More Images for your own page</h3>
                         <Col xs={12}  md={6}>
                             <Form.Group >
                                 <Form.Label>Please write more information</Form.Label>
-                                <Form.Control as="textarea" rows={4} maxLength ="800" onChange={(event)=> {this.setState({promoMoreInfo: event.target.value})}} required/>
+                                <Form.Control as="textarea" rows={4} maxLength ="800" onChange={(event)=> {this.setState({promoMoreInfo: event.target.value})}}/>
                             </Form.Group>
                         </Col>
                         <Col xs={12} md={6} >
                             <Form.Group>
                                 <Form.Label>Place here more Images</Form.Label>
-                                <Form.Control type="text" placeholder="only 1 url" onBlur={(event) =>this.imgArr(0,event.target.value)} required/>
-                                <Form.Control type="text" placeholder="only 1 url" onBlur={(event) =>this.imgArr(1,event.target.value)} required/>
-                                <Form.Control type="text" placeholder="only 1 url" onBlur={(event) =>this.imgArr(2,event.target.value)} required/>
+                                <Form.Control type="text" placeholder="only 1 url" onBlur={(event) =>this.imgArr(0,event.target.value)}/>
+                                <Form.Control type="text" placeholder="only 1 url" onBlur={(event) =>this.imgArr(1,event.target.value)}/>
+                                <Form.Control type="text" placeholder="only 1 url" onBlur={(event) =>this.imgArr(2,event.target.value)}/>
                             </Form.Group>
                         </Col>
-                        <Button type="submit">Click Here To Place Your Happy Hour</Button>
+                        <Button type="button" onClick={this.saveInfo}>Click Here To Place Your Happy Hour</Button>
                     </Row>
                 </Form>
                 </Container>

@@ -27,6 +27,15 @@ class App extends React.Component{
         usersData = userJSON;
       }
 
+      let promoData = [];
+
+      if(localStorage.localPromo) {
+        promoData = JSON.parse(localStorage.localPromo);
+      }
+      else{
+        promoData = promotionsJSON;
+      }
+
 
     this.state = {
         allPromos : promotionsJSON,
@@ -37,7 +46,8 @@ class App extends React.Component{
   }
   
   addPromo = (newPromo) => {
-    
+    const localPromoString = JSON.stringify(this.state.allPromos.concat(newPromo));
+    localStorage.localPromo = localPromoString;
     this.setState({
       allPromos: [newPromo].concat(this.state.allPromos)
   
