@@ -1,4 +1,19 @@
+
+.p-type label {
+    color: white;
+    text-shadow: 3px 3px 5px #d9f18a
+}
+
+
+.p-type .form-control{
+    border: none; 
+    border:solid 1px #ccc;
+    border-radius: 20px;
+  }
+
+
 .p-type .form-control:focus {
     border-color: #28a745 !important;
     box-shadow: 0 0 0 0.25rem rgba(217, 241, 138, 0.5) !important;
+
 } 

@@ -86,12 +86,14 @@ class App extends React.Component{
       />
       <Route exact path = "/">
         <HomePage
+        allPromos={this.state.allPromos}
         />
       
       </Route>
       <Route exact path = "/type/:type">
         <Type
         allPromos={this.state.allPromos}
+        activeUser={this.state.activeUser}
         />
       </Route>
       <Route exact path = "/add">

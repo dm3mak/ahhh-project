@@ -3,7 +3,7 @@ import React, { Component } from 'react'
 import { Nav, Navbar, Button } from 'react-bootstrap';
 import { withRouter } from 'react-router';
 import './HomeNavbar.css';
-import logo from './Ahhh.jpeg'
+
  class HomeNavbar extends Component {
     constructor(props){
         super(props);  
@@ -15,14 +15,14 @@ import logo from './Ahhh.jpeg'
         const signinEl =  (!this.props.activeUser)? 
         <Nav.Link href="/#/signin">Sign In</Nav.Link>: null
         const nameEl = (this.props.activeUser) ? 
-        <Nav.Link href="/"> Hello {this.props.activeUser.fname} {this.props.activeUser.lname}</Nav.Link> : null
+        <Nav.Link > Hello {this.props.activeUser.fname} {this.props.activeUser.lname}</Nav.Link> : null
         const logoutEl = (this.props.activeUser)?
         <Nav.Link href="/#/" onClick={() => this.props.logout()}>Logout</Nav.Link>: null
         return (
             <div>
-            <Navbar   expand="md">
+            <Navbar expand="md">
                 <Navbar.Brand href="/">
-                    <img src={logo} alt="Logo" />
+                    <img src={process.env.PUBLIC_URL + "/img/home-logo.jpeg"} alt="Logo" />
                 </Navbar.Brand>
                 <Navbar.Toggle aria-controls="responsive-navbar-nav"/>
                 <Navbar.Collapse id="basic-navbar-nav">

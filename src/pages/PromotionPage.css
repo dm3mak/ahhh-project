@@ -1,0 +1,8 @@
+.p-promotion .carousel-item{ 
+    height:500px !important;
+}
+.p-promotion .carousel-item img {
+    width: 100%;
+    height: 500px !important;
+    object-fit: cover;
+}

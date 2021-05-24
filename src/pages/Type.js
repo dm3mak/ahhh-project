@@ -6,6 +6,7 @@ import { v4 as uuidv4 } from 'uuid';
 import { Col, Form, Row } from 'react-bootstrap';
 import './Type.css';
 
+
 class Type extends Component {
     constructor(props){
         super(props);
@@ -39,20 +40,20 @@ class Type extends Component {
         .filter (item => item.weekdays.includes(this.state.valueWeekday)||this.state.valueWeekday==="")
         .filter (item => item.start.includes(this.state.valueStartHours)||this.state.vvalueStartHours==="")
         .map ((item) => {
-            return <AddedItem item={item} key={uuidv4()}/>
+            return <AddedItem item={item} key={uuidv4()} activeUser={this.props.activeUser}/>
         })
         
         return (
             <div className="p-type">
-                
-                <div className="container-fluid px-5 ">
+               
+                <div className="container-fluid px-4 pt-2">
                 <Row>
                     <Col xs={12} md={6} lg={3}>
-                        <Form.Label>Please choose type of promotion</Form.Label>
+                        <Form.Label>Search by title</Form.Label>
                         <Form.Control  type="text" placeholder="Search by title" onChange={ this.showTypedTitle}/>
                     </Col>
                     <Col xs={12} md={6} lg={3}>
-                        <Form.Label>Please choose type of city</Form.Label>
+                        <Form.Label>Search by city</Form.Label>
                         <Form.Control  type="text" placeholder="Search by city" onChange={ this.showTypedCity}/>
                     </Col>
                     <Col xs={6} lg={3}>
@@ -104,7 +105,9 @@ class Type extends Component {
                     </Col>
                 </Row>
                 </div>
+                
                     {filteredItems}
+                
                 <footer>
                     <Link style={{ color: 'inherit', textDecoration: 'inherit'}} to="/add"><p>Click here to add your promotion</p></Link>
                 </footer>

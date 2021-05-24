@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { Container, Form } from 'react-bootstrap'
-
+import './SignupPage.css';
 export default class SignupPage extends Component {
     constructor(props){
         super(props);
@@ -38,7 +38,8 @@ export default class SignupPage extends Component {
     }
     render() {
         return (
-            <Container>
+            <div className="p-signup">
+            <Container className ="mt-5">
             <Form noValidate validated={this.state.validated} onSubmit={this.handleSubmit}>
             <h3>Sign Up</h3>
 
@@ -76,6 +77,7 @@ export default class SignupPage extends Component {
             </p>
             </Form>
        </Container>
+       </div>
         )
     }
 }

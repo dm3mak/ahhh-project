@@ -1,0 +1,16 @@
+.p-signup .container {
+    display: flex;
+    justify-content: center;
+    background-color: #003d77;
+    color: #d9f18a;
+    border-radius: 100px;
+    box-shadow: 0 0 0 0.40rem rgba(233, 250, 179, 0.5) !important;
+    
+}
+.p-signup .container form{
+    width: 70%;
+    margin: 100px;
+}
+.p-signup a{
+    color: cornsilk;
+}

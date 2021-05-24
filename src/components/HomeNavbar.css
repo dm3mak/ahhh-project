@@ -1,5 +1,5 @@
 .navbar-brand > img{
-    height:50px;
+    height:100px;
 }
 .navbar {
     background-color: #003d77;
@@ -13,8 +13,8 @@
     color:white;
     font-weight: 500;
 }
-.navbar-light .navbar-nav .nav-link:focus, .navbar-light .navbar-nav .nav-link:active{
+.navbar-light .navbar-nav .nav-link:focus, .navbar-light .navbar-nav .nav-link:active, .nav-link.active {
     color:#003d77;
-    background-color:white ;
-    font-weight: 500;
+    background-color:white  !important;
+    font-weight: 700 !important;
 }

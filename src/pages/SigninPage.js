@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { Container } from 'react-bootstrap'
-
+import './SigninPage.css';
 
 export default class SigninPage extends Component {
     constructor(props){
@@ -40,7 +40,9 @@ export default class SigninPage extends Component {
     }
     render() {
         return (
-            <Container >
+            <div className="p-signin">
+            <Container className="mt-5">
+                
             <form>
                 <h3>Sign In</h3>
 
@@ -60,7 +62,9 @@ export default class SigninPage extends Component {
                    New Member? <a href="/#/signup">SignUp</a>
                 </p>
             </form>
+            
             </Container>
+            </div>
         );
     }
 }
