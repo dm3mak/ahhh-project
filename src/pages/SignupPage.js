@@ -71,8 +71,8 @@ export default class SignupPage extends Component {
                 <Form.Control.Feedback type="invalid">Please enter your password.</Form.Control.Feedback>
             </div>
 
-            <button type="submit" className="btn btn-primary btn-block">Sign Up</button>
-            <p className="forgot-password text-right">
+            <button type="submit" className="btn btn-primary btn-block mt-3">Sign Up</button>
+            <p className="forgot-password text-right mt-3">
                 Already registered <a href="/#/signin">sign in?</a>
             </p>
             </Form>

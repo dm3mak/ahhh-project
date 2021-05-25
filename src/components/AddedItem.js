@@ -33,7 +33,7 @@ export default class AddedItem extends Component {
         
         return (
             <div className="c-added-item">
-            <div className="container-fluid px-5">
+            <div className="container ">
             <div className="card my-5" >
                 <div className="row g-0">
                     <div className="col-md-3 px-0">

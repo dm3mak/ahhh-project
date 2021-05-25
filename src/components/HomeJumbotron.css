@@ -1,0 +1,23 @@
+.c-home-jumbotron .carousel-item{ 
+    height:500px !important;
+}
+.c-home-jumbotron .carousel-item img {
+    width: 100%;
+    height: 500px !important;
+    
+    border-radius: 40px;
+}
+
+
+.c-home-jumbotron .jumbotron{
+    background-color: #e9ecef ;
+    color: #003d77;
+}
+.c-home-jumbotron img{
+    width: 100%;
+    
+}
+.c-home-jumbotron a {
+    color: #003d77;
+    
+}

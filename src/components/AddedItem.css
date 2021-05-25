@@ -5,41 +5,31 @@
     box-shadow: 0 4px 8px 5px rgba(255, 251, 251, 0.2), 0 6px 20px 5px rgba(241, 239, 239, 0.50);
    
 }
-.button-div {
-    display: flex;
-}
 .card-body a{
     color:#003d77
 }
 .card-body a:hover{
     text-decoration: none;
 }
-
-
-.modal .card{
-    background-color: #003d77;
-    color: #e9ecef;
-    
-    box-shadow: 0 4px 8px 0 rgba(255, 251, 251, 0.2), 0 6px 20px 0 rgba(241, 239, 239, 0.19);
-}
 .c-added-item .center {
-   
-
-  
   padding: 10px;
 }
 
-.btn-primary,  .btn-primary:hover, .btn-primary:active, .btn-primary:visited {
+.c-added-item .button-div {
+    display: flex;
+}
+.c-added-item .btn-primary, .c-added-item  .btn-primary:hover, .c-added-item .btn-primary:active, .c-added-item .btn-primary:visited {
     background-color: #003d77 !important;
     color:  #e9ecef;
     margin-left: auto;
-    width:200px;
-    box-shadow:  0 4px 8px 5px rgba(228, 0, 0, 0.2), 0 6px 20px 5px rgba(180, 1, 1, 0.5);;
+    width:130px;
+    box-shadow:  0 4px 8px 5px rgba(159, 182, 204, 0.5), 0 6px 20px 2px rgba(159, 182, 204, 0.5);;
 }
-.btn-primary:hover{
-    background-color: #e9ecef !important;
-    color: #003d77;
+.c-added-item .btn-primary:hover{
+    background-color: #d9f18a !important;
+    color:  #003d77;
 }
+
 .c-added-item img {
     border-radius: 25px ;
     width: 100%;

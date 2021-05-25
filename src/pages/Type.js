@@ -5,6 +5,7 @@ import AddedItem from '../components/AddedItem';
 import { v4 as uuidv4 } from 'uuid';
 import { Col, Form, Row } from 'react-bootstrap';
 import './Type.css';
+import Footer from '../components/Footer';
 
 
 class Type extends Component {
@@ -46,7 +47,7 @@ class Type extends Component {
         return (
             <div className="p-type">
                
-                <div className="container-fluid px-4 pt-2">
+                <div className="container-fluid px-4 pt-4">
                 <Row>
                     <Col xs={12} md={6} lg={3}>
                         <Form.Label>Search by title</Form.Label>
@@ -108,9 +109,7 @@ class Type extends Component {
                 
                     {filteredItems}
                 
-                <footer>
-                    <Link style={{ color: 'inherit', textDecoration: 'inherit'}} to="/add"><p>Click here to add your promotion</p></Link>
-                </footer>
+                <Footer/>
             </div>
         )
     }

@@ -1,0 +1,48 @@
+.p-home .card-wrapper {
+    margin: 5% 0;
+    
+}
+.p-home .card{
+    background-color: #e9ecef;
+    color: #003d77;
+    border-radius: 5px;
+}
+
+
+.p-home  .custom-image {
+    width: 90%; 
+    height: 300px;
+    border-radius: 15px;
+    margin-top: 20px;
+}
+
+.p-home  .custom-image img {
+    object-fit: cover;
+}
+
+.p-home  .card-title {
+    letter-spacing: 1.1px;
+}
+
+.p-home  .card-text {
+    font-family: MerriweatherRegular;
+    font-size: 22px;
+    line-height: initial;
+}
+.p-home  .title ,  .p-home  .about{
+    height: 100px;
+}
+.p-home  .info p {
+    height: 50px;
+}
+.p-home .btn-primary, .p-home  .btn-primary:hover, .p-home .btn-primary:active, .p-home .btn-primary:visited {
+    background-color: #003d77 !important;
+    color:  #e9ecef;
+   
+    width:200px;
+    box-shadow:  0 4px 8px 5px rgba(159, 182, 204, 0.5), 0 6px 20px 2px rgba(159, 182, 204, 0.5);;
+}
+.p-home .btn-primary:hover{
+    background-color: #d9f18a !important;
+    color:  #003d77;
+}

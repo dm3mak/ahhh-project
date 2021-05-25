@@ -1,16 +1,29 @@
 .p-signup .container {
     display: flex;
     justify-content: center;
-    background-color: #003d77;
-    color: #d9f18a;
+    background-color: #e9ecef;
+    color:#003d77 ;
     border-radius: 100px;
-    box-shadow: 0 0 0 0.40rem rgba(233, 250, 179, 0.5) !important;
-    
+    box-shadow: 0 0 0 0.50rem rgba(0, 61, 119, 0.8) !important;
 }
 .p-signup .container form{
     width: 70%;
     margin: 100px;
 }
 .p-signup a{
-    color: cornsilk;
+    color: brown;
+}
+
+.p-signup .btn-primary, .p-signup  .btn-primary:hover, .p-signup .btn-primary:active, .p-signup .btn-primary:visited {
+    background-color: #003d77 !important;
+    color: #e9ecef;
+   
+    
+    box-shadow:  0 4px 8px 5px rgba(59, 0, 221, 0.2), 0 6px 20px 2px rgba(34, 1, 180, 0.2);;
+}
+.p-signup .btn-primary:hover{
+    
+    background-color: #d9f18a !important;
+    color:  #003d77;
+   
 }

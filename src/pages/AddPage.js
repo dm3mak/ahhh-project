@@ -1,7 +1,7 @@
-
 import React, { Component } from 'react'
 import { Col, Container, Form, Row,  Button } from 'react-bootstrap'
 import { v4 as uuidv4 } from 'uuid';
+import './AddPage.css';
 
 export default class AddPage extends Component {
     constructor(props){
@@ -70,7 +70,7 @@ export default class AddPage extends Component {
         }
         
         return (
-            <div className="p-add">
+            <div className="p-add mt-5">
                 <Container>
                 <Form>
                     <Row>
@@ -106,7 +106,7 @@ export default class AddPage extends Component {
                         <Col xs={6} lg={2}>
                             <Row></Row>
                             <Form.Group >
-                                <Form.Label>Happy Hour Starts at</Form.Label>
+                                <Form.Label>Happy Hour Starts</Form.Label>
                                 <Form.Control as="select"  onChange={(event)=> {this.setState({promoStart: event.target.value})}}>
                                     <option disabled selected>Select your option</option>
                                     <option>00:00</option>
@@ -138,7 +138,7 @@ export default class AddPage extends Component {
                         </Col>
                         <Col xs={6}  lg={2}>
                             <Form.Group >
-                                <Form.Label>Happy Hour Ends at</Form.Label>
+                                <Form.Label>Happy Hour Ends </Form.Label>
                                 <Form.Control as="select" onChange={(event)=> {this.setState({promoEnd: event.target.value})}}>
                                     <option disabled selected>Select your option</option>
                                     <option>01:00</option>
@@ -241,7 +241,9 @@ export default class AddPage extends Component {
                                 <Form.Control type="text" placeholder="only 1 url" onBlur={(event) =>this.imgArr(2,event.target.value)}/>
                             </Form.Group>
                         </Col>
-                        <Button type="button" onClick={this.saveInfo}>Click Here To Place Your Happy Hour</Button>
+                        <div className="text-center">
+                            <Button type="button" onClick={this.saveInfo}>Click Here To Place Your Happy Hour</Button>
+                        </div>
                     </Row>
                 </Form>
                 </Container>

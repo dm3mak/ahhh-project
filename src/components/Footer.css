@@ -1,0 +1,11 @@
+.c-footer{
+    background-color: #003d77 !important;
+    color:  #e9ecef;
+    text-align: right;
+}
+.c-footer a{
+    color:  #e9ecef;
+    margin-right: 20px;
+    font-weight: 500;
+    font-size: larger;
+}

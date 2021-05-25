@@ -3,7 +3,7 @@
         "id": 1,
         "type": "drink",
         "title": "Sunset Bar",
-        "weekdays" : ["Monday", "Tuesday", "Wednesday"],
+        "weekdays" : ["Monday", "Tuesday"],
         "start" : "19:00",
         "end" :  "22:00",
         "about": "Every Monday and Tuesday 1+1 on Coctails - Fill free to book ",

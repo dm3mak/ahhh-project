@@ -57,8 +57,8 @@ export default class SigninPage extends Component {
                 </div>
 
                 
-                <button type="button" className="btn btn-primary btn-block" onClick={this.handleLogin} variant ="success">Submit</button>
-                <p className="forgot-password text-right">
+                <button type="button" className="btn btn-primary btn-block mt-3" onClick={this.handleLogin} variant ="success">Submit</button>
+                <p className="forgot-password text-right mt-3">
                    New Member? <a href="/#/signup">SignUp</a>
                 </p>
             </form>

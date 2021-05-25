@@ -11,6 +11,7 @@ import HomeNavbar from './components/HomeNavbar';
 import Type from './pages/Type';
 import promotionsJSON from './data/promotions.json';
 import userJSON from './data/users.json';
+import ScrollToTop from './components/ScrollToTops';
 
 class App extends React.Component{
   
@@ -79,6 +80,7 @@ class App extends React.Component{
     return (
       
     <HashRouter>
+      <ScrollToTop/>
       <HomeNavbar
         activeUser={this.state.activeUser}
         logout={this.logout}
@@ -105,6 +107,7 @@ class App extends React.Component{
       <Route exact path = "/promotion/:id"> 
         <PromotionPage
         allPromos={this.state.allPromos}
+        activeUser={this.state.activeUser}
         />
       </Route>
       <Route exact path = "/signin">
