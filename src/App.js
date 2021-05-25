@@ -39,7 +39,7 @@ class App extends React.Component{
 
 
     this.state = {
-        allPromos : promotionsJSON,
+        allPromos : promoData,
         activeUser: userJSON[0],
         allUsers: usersData
     }

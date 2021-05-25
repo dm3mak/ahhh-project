@@ -21,7 +21,7 @@ import './HomeNavbar.css';
         return (
             <div>
             <Navbar expand="md">
-                <Navbar.Brand href="/">
+                <Navbar.Brand href="#/">
                     <img src={process.env.PUBLIC_URL + "/img/home-logo.jpeg"} alt="Logo" />
                 </Navbar.Brand>
                 <Navbar.Toggle aria-controls="responsive-navbar-nav"/>
