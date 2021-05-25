@@ -40,10 +40,10 @@ class App extends React.Component{
 
     this.state = {
         allPromos : promoData,
-        activeUser: userJSON[0],
+        activeUser: null,
         allUsers: usersData
     }
-    
+    // userJSON[0]
   }
   
   addPromo = (newPromo) => {

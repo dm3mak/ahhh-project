@@ -12,13 +12,15 @@ export default class HomeJumbotron extends Component {
             <div className="row">
            
                 <Row>
-                <Col xs={12} md={6} >
-                <h1 className="display-6">ANY HOUR - HAPPY HOUR!</h1>
+                <Col xs={12} md={6} className="py-5">
+                <h1 className="display-6 bold-me">ANY HOUR - HAPPY HOUR!</h1>
                     <br />
-                    <p className="lead">Live every hour like it’s happy hour! </p>
-                    <p className="lead">Eat, drink, sleep, shop & order any type of service under one roof!.</p>
+                    <p className="lead bold-me">Live every hour like it’s happy hour! </p>
+                    <p className="lead bold-me">Eat, drink, sleep, shop & order any type of service under one roof!.</p>
                     <br />
-                    <p className="lead">We have mind-blowing discounts from any business you can think of!</p>
+                    
+                    <p className="lead bold-me">We have mind-blowing discounts from any business you can think of!</p>
+                    <br />
                     <br />
                     <a href="#/type/eat" className="text-center"><p className="display-6">Check it out</p></a>
                 </Col>

@@ -44,7 +44,7 @@ class HomePage extends Component {
             <div className="p-home">
                 <HomeJumbotron/>
                 <Container>
-                   <h1 className="text-center">There you can see  random Happy-Hour promotions</h1>
+                   <h1 className="text-center">Random Happy-Hour promotions</h1>
                     <Row>
                     {randomPromos}
                     </Row>

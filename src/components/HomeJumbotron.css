@@ -7,7 +7,9 @@
     
     border-radius: 40px;
 }
-
+.c-home-jumbotron .bold-me{
+    font-weight: 400;
+}
 
 .c-home-jumbotron .jumbotron{
     background-color: #e9ecef ;
