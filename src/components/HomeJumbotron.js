@@ -13,6 +13,7 @@ export default class HomeJumbotron extends Component {
            
                 <Row>
                 <Col xs={12} md={6} className="py-5">
+                    <div className ="side-item">
                 <h1 className="display-6 bold-me">ANY HOUR - HAPPY HOUR!</h1>
                     <br />
                     <p className="lead bold-me">Live every hour like it’s happy hour! </p>
@@ -23,6 +24,7 @@ export default class HomeJumbotron extends Component {
                     <br />
                     <br />
                     <a href="#/type/eat" className="text-center"><p className="display-6">Check it out</p></a>
+                    </div>
                 </Col>
                 <Col xs={12} md={6} >
                 <Carousel>
