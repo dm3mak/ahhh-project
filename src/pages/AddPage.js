@@ -36,7 +36,7 @@ export default class AddPage extends Component {
             moreImg : this.state.promoMoreImg
         }
         this.props.addPromo(newPromo);
-        window.location.href = `/#/type/${this.state.promoType.toLowerCase()}`;
+        window.location.href = `#/type/${this.state.promoType.toLowerCase()}`;
     }
     checkBoxArr = (event) => {
         // if event.target.checked === true
@@ -65,7 +65,7 @@ export default class AddPage extends Component {
     }
     render() {
         if(  ! this.props.activeUser) {
-            window.location.href = "/#/signin";
+            window.location.href = "#/signin";
             return null;
         }
         

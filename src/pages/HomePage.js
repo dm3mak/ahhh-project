@@ -32,7 +32,7 @@ class HomePage extends Component {
                             <p ><small>Address: {promotion.address}, {promotion.city}</small></p>
                             </article>
                             <section className="text-center">
-                                <a href={`/#/promotion/${promotion.id}`} className="btn btn-primary">More Info</a>
+                                <a href={`#/promotion/${promotion.id}`} className="btn btn-primary">More Info</a>
                             </section>
                         </div>
                     </div>

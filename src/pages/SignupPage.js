@@ -34,7 +34,7 @@ export default class SignupPage extends Component {
             password: this.state.password
         }
         this.props.addUser(newUserObj);
-        window.location.href="/#/";
+        window.location.href="#/";
     }
     render() {
         return (
@@ -73,7 +73,7 @@ export default class SignupPage extends Component {
 
             <button type="submit" className="btn btn-primary btn-block mt-3">Sign Up</button>
             <p className="forgot-password text-right mt-3">
-                Already registered <a href="/#/signin">sign in?</a>
+                Already registered <a href="#/signin">sign in?</a>
             </p>
             </Form>
        </Container>

@@ -19,12 +19,12 @@ import Footer from '../components/Footer';
         this.setState({
             showModal: false,
         })
-        window.location.href = "/#/"
+        window.location.href = "#/"
 
     }
     openModal = () => {
         if(  ! this.props.activeUser) {
-            window.location.href = "/#/signin";
+            window.location.href = "#/signin";
             return null;
         }
         else {

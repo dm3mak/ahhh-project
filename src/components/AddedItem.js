@@ -15,12 +15,12 @@ export default class AddedItem extends Component {
         this.setState({
             showModal: false,
         })
-        window.location.href = "/#/"
+        window.location.href = "#/"
 
     }
     openModal = () => {
         if(  ! this.props.activeUser) {
-            window.location.href = "/#/signin";
+            window.location.href = "#/signin";
             return null;
         }
         else {
@@ -48,7 +48,7 @@ export default class AddedItem extends Component {
                         <p><small>Happy Hours: {this.props.item.start} - {this.props.item.end} on ({this.props.item.weekdays.join(', ')})</small></p>
                         <div className ="button-div">
                         
-                        <Link to={`/promotion/${this.props.item.id}`}><Button className="mt-3 btn  btn-lg btn-more" >More Info</Button></Link>
+                        <a href={`#/promotion/${this.props.item.id}`}><Button className="mt-3 btn  btn-lg btn-more" >More Info</Button></a>
                         <Button className="mt-3 btn  btn-lg btn-reserve"  onClick={this.openModal}>Reserve</Button>
                         </div>
                     </div>

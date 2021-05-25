@@ -20,7 +20,7 @@ export default class HomeJumbotron extends Component {
                     <br />
                     <p className="lead">We have mind-blowing discounts from any business you can think of!</p>
                     <br />
-                    <a href="/#/type/eat" className="text-center"><p className="display-6">Check it out</p></a>
+                    <a href="#/type/eat" className="text-center"><p className="display-6">Check it out</p></a>
                 </Col>
                 <Col xs={12} md={6} >
                 <Carousel>
@@ -92,7 +92,7 @@ export default class HomeJumbotron extends Component {
                     <br />
                     <p className="display-6">We have mind-blowing discounts from any business you can think of!</p>
                     <br />
-                    <a href="/#/type/eat" className="text-center"><p className="display-6">Check it out</p></a>
+                    <a href="#/type/eat" className="text-center"><p className="display-6">Check it out</p></a>
                 </div>                              
                 <div className="col-lg-6 text-center">
                     <img src={process.env.PUBLIC_URL + "/img/home.jpg"}/>
